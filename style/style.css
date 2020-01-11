@@ -5,6 +5,7 @@ body {
 }
 
 body .container {
+  border-top: 5px solid #01a279;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,6 +18,7 @@ body .container {
 @media (max-width: 768px) {
   body .container {
     padding: 0;
+    background-color: #01a279;
   }
 }
 
@@ -50,8 +52,8 @@ body .container .nav {
     position: absolute;
     top: 50px;
     width: 100%;
-    height: calc(100vh - 50px);
-    background-color: #373737;
+    height: calc(100vh - 55px);
+    background-color: #5d5d5d;
   }
   body .container .nav.active {
     left: 0;
@@ -95,7 +97,11 @@ body .container .nav__link:hover {
 
 @media (max-width: 768px) {
   body .container .nav__link {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid white;
+    color: white;
+  }
+  body .container .nav__link:hover {
+    background-color: #373737;
     color: white;
   }
 }
@@ -104,7 +110,7 @@ body .container .menu-toggle {
   float: right;
   line-height: 51px;
   font-size: 24px;
-  color: #01a279;
+  color: white;
   cursor: pointer;
   display: none;
 }
