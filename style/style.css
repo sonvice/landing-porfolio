@@ -4,72 +4,98 @@ body {
   padding: 0;
 }
 
-body .nav {
+body .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  background-color: #01a279;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
-body .nav__toggle {
-  width: 100%;
-  text-align: right;
-  font-size: 30px;
-  padding: 10px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #01a279;
+@media (max-width: 768px) {
+  body .container {
+    padding: 0 20PX;
+  }
+}
+
+body .container .logo {
+  display: inline-block;
+}
+
+body .container .logo img {
+  height: 50px;
+}
+
+body .container .nav {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  body .container .nav {
+    left: -100%;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: yellowgreen;
+  }
+  body .container .nav.active {
+    left: 0;
+  }
+}
+
+body .container .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  body .container .nav__list {
+    display: block;
+  }
+}
+
+body .container .nav__item {
+  list-style: none;
+}
+
+body .container .nav__link {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  text-decoration: none;
   color: white;
+  display: block;
+}
+
+body .container .nav__link:hover {
+  background-color: #5d5d5d;
+}
+
+@media (max-width: 768px) {
+  body .container .nav__link {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+body .container .menu-toggle {
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
   display: none;
 }
 
 @media (max-width: 768px) {
-  body .nav__toggle {
+  body .container .menu-toggle {
     display: block;
   }
-}
-
-body .nav__logo {
-  width: 200px;
-  display: block;
-}
-
-body .nav__list {
-  width: 80%;
-  margin: 0 auto;
-  padding: 0;
-  text-align: right;
-}
-
-@media (max-width: 768px) {
-  body .nav__list {
-    width: 100%;
-  }
-}
-
-body .nav__item {
-  display: inline-block;
-  list-style: none;
-  padding: 20px;
-  font-family: "Roboto", sans-serif;
-}
-
-@media (max-width: 768px) {
-  body .nav__item {
-    display: block;
-    text-align: center;
-  }
-}
-
-body .nav__item:hover {
-  background-color: #01a279;
-}
-
-body .nav__link {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #5d5d5d;
-  display: block;
-}
-
-body .nav__link:hover {
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */
