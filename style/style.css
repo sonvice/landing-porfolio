@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family= Roboto: 400,500,900 & display = swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -8,8 +8,7 @@ body .container {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0 100px;
-  background-color: #01a279;
+  background-color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -17,12 +16,24 @@ body .container {
 
 @media (max-width: 768px) {
   body .container {
-    padding: 0 20PX;
+    padding: 0;
+  }
+}
+
+body .container .box {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  body .container .box {
+    width: 100%;
   }
 }
 
 body .container .logo {
   display: inline-block;
+  position: absolute;
 }
 
 body .container .logo img {
@@ -40,7 +51,7 @@ body .container .nav {
     top: 50px;
     width: 100%;
     height: calc(100vh - 50px);
-    background-color: yellowgreen;
+    background-color: #373737;
   }
   body .container .nav.active {
     left: 0;
@@ -72,23 +83,28 @@ body .container .nav__link {
   text-decoration: none;
   color: white;
   display: block;
+  color: #5d5d5d;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
 
 body .container .nav__link:hover {
-  background-color: #5d5d5d;
+  background-color: #01a279;
+  color: white;
 }
 
 @media (max-width: 768px) {
   body .container .nav__link {
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    color: white;
   }
 }
 
 body .container .menu-toggle {
   float: right;
-  line-height: 50px;
+  line-height: 51px;
   font-size: 24px;
-  color: white;
+  color: #01a279;
   cursor: pointer;
   display: none;
 }
@@ -96,6 +112,7 @@ body .container .menu-toggle {
 @media (max-width: 768px) {
   body .container .menu-toggle {
     display: block;
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

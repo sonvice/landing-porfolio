@@ -1,5 +1,4 @@
 
-
 body{
     margin: 0;
     padding: 0;
@@ -8,17 +7,26 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 100px;
-    background-color: $primary;
+    // padding: 0 100px;
+    background-color: white;
     box-sizing: border-box;
     width: 100%;
     @media(max-width:768px){
-       padding: 0 20PX;
+       padding:0;
+    }
+
+    .box{
+        width: 70%;
+        margin: 0 auto;
+        @media(max-width: 768px){
+            width: 100%;
+        }
     }
 
    
     .logo{
         display: inline-block;
+        position: absolute;
             & img{
                height: 50px;
 
@@ -34,8 +42,8 @@ body{
         position: absolute;
         top: 50px;
         width: 100%;
-        height: calc(100vh - 50px) ;
-        background-color: yellowgreen;
+        height: calc(100vh - 50px);
+        background-color: $secundary;
         &.active{
             left: 0;
         }
@@ -62,12 +70,17 @@ body{
         text-decoration: none;
         color: white;
         display: block;
+        color: $text;
+        text-transform: uppercase;
+        font-family:$roboto-regular;
         &:hover{
-            background-color: $text;
+            background-color: $primary;
+            color: white;
         }
 
         @media(max-width:768px){
             border-bottom: 2px solid rgba(0,0,0,0.2);
+            color: white;
         }
     }
 
@@ -77,22 +90,18 @@ body{
 
     & .menu-toggle{
     float: right;
-    line-height: 50px;
+    line-height: 51px;
     font-size: 24px;
-    color: white;
+    color:$primary;
     cursor: pointer;
     display: none;
 
     @media(max-width: 768px){
     display: block;
+    padding-right: 20px;
     }
 
     }
-
-
-
-
-
 
 
  }
