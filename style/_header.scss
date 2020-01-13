@@ -1,5 +1,24 @@
 
+/* ----------------------- SECCIÓN DE IMAGEN DESTACADA ---------------------- */
+
 .header{
-    background-image: url();
+    width: 100%;
+    display: flex;
+    &__content{
+       width: 1280PX;
+        margin: 0 auto;
+        
+    }
+
+    &__box{
+        display: flex;
+        justify-content: center;
+      
+        img{
+            width: 100%;
+        }
+    }
+
+ 
 }
 

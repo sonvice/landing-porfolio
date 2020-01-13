@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 body {
   margin: 0;
@@ -6,7 +7,6 @@ body {
 
 body .container {
   border-top: 5px solid #01a279;
-  position: absolute;
   top: 0;
   left: 0;
   background-color: white;
@@ -127,7 +127,29 @@ body .container .menu-toggle {
   }
 }
 
+/* ----------------------- SECCIÓN DE IMAGEN DESTACADA ---------------------- */
 .header {
-  background-image: url();
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__content {
+  width: 1280PX;
+  margin: 0 auto;
+}
+
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__box img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
