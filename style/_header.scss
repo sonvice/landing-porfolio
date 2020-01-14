@@ -4,20 +4,90 @@
 .header{
     width: 100%;
     display: flex;
+   
+    justify-content: center;
     &__content{
        width: 1280PX;
-        margin: 0 auto;
-        
+       position: relative;
+      
     }
 
     &__box{
-        display: flex;
-        justify-content: center;
-      
+    
+
         img{
             width: 100%;
         }
     }
+
+    &__box-title{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 300px;
+       color: white;
+        font-family: $roboto-regular;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (max-width:1024px){
+            top: 15%;
+           
+        }
+
+        @media (max-width:965px){
+            top: 8%;
+            left: 15%;
+        }
+
+        @media (max-width:768px){
+            top: 10%;
+            left: 4%;
+            height: 250px;
+        }
+
+        @media(max-width: 415px){
+            top: 20%;
+            left: 4%;
+            height: 130px;
+        }
+    }
+
+    &__title{
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 1px;
+        & span{
+            font-size: 3rem;
+        }
+
+        @media (max-width:768px){
+           font-size: 2rem;
+        }
+
+        @media(max-width: 415px){
+            font-size: 1.2rem;
+            & span{
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+    &__cta{
+        text-decoration: none;
+        color: white;
+        padding: 15px 35px;
+        border: 2px solid;
+        @media (max-width:415px){
+            padding: 10px 30px;
+        }
+    }
+
 
  
 }
