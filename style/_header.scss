@@ -9,7 +9,9 @@
     &__content{
        width: 1280PX;
        position: relative;
-      
+       @media (max-width:768px){
+       z-index: 0;
+    }
     }
 
     &__box{
@@ -47,6 +49,7 @@
             top: 10%;
             left: 4%;
             height: 250px;
+            z-index: 5;
         }
 
         @media(max-width: 415px){
@@ -83,12 +86,51 @@
         color: white;
         padding: 15px 35px;
         border: 2px solid;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        border: solid white;
+        text-transform: uppercase;
+        &:hover{
+            color: $primary;
+            font-weight: 700;
+        }
+        &::after{
+            content: '';
+            display: block;
+            background-color: white;
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 0;
+            z-index: -1;
+            transition: all 0.3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
         @media (max-width:415px){
             padding: 10px 30px;
+            
         }
     }
 
 
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

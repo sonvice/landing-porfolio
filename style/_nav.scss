@@ -41,13 +41,15 @@ body{
     @media(max-width:768px){
         left: -100%;
         position: absolute;
-        top: 50px;
+        top: 55px;
         width: 100%;
         height: calc(100vh - 55px);
         background-color: $text;
         transition: .3s ease all;
+        z-index: 5;
         &.active{
             left: 0;
+            z-index: 1;
         }
     }
 

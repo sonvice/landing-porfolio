@@ -53,15 +53,17 @@ body .container .nav {
   body .container .nav {
     left: -100%;
     position: absolute;
-    top: 50px;
+    top: 55px;
     width: 100%;
     height: calc(100vh - 55px);
     background-color: #5d5d5d;
     -webkit-transition: .3s ease all;
     transition: .3s ease all;
+    z-index: 5;
   }
   body .container .nav.active {
     left: 0;
+    z-index: 1;
   }
 }
 
@@ -143,6 +145,12 @@ body .container .menu-toggle {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .header__content {
+    z-index: 0;
+  }
+}
+
 .header__box img {
   width: 100%;
 }
@@ -188,6 +196,7 @@ body .container .menu-toggle {
     top: 10%;
     left: 4%;
     height: 250px;
+    z-index: 5;
   }
 }
 
@@ -230,6 +239,34 @@ body .container .menu-toggle {
   color: white;
   padding: 15px 35px;
   border: 2px solid;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border: solid white;
+  text-transform: uppercase;
+}
+
+.header__cta:hover {
+  color: #01a279;
+  font-weight: 700;
+}
+
+.header__cta::after {
+  content: '';
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__cta:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 415px) {
