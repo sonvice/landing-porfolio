@@ -196,7 +196,6 @@ body .container .menu-toggle {
     top: 10%;
     left: 4%;
     height: 250px;
-    z-index: 5;
   }
 }
 
@@ -248,7 +247,7 @@ body .container .menu-toggle {
 
 .header__cta:hover {
   color: #01a279;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .header__cta::after {

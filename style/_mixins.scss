@@ -1,8 +1,39 @@
 
 
-@mixin cta (){
-    text-decoration: none;
-    color: white;
-    padding: 15px 35px;
-    border: 2px solid;
+@mixin cta($colorText, $borderColor, $hoverColorText, $afterBgroundColor,){
+    &__cta{
+        text-decoration: none;
+        color:$colorText;
+        padding: 15px 35px;
+        border: 2px solid;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        border: $borderColor;
+        text-transform: uppercase;
+        &:hover{
+            color: $hoverColorText;
+            font-weight: 600;
+        }
+        &::after{
+            content: '';
+            display: block;
+            background-color: $afterBgroundColor;
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 0;
+            z-index: -1;
+            transition: all 0.3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+        @media (max-width:415px){
+            padding: 10px 30px;
+            
+        }
+    }
 }
