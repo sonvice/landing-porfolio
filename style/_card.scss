@@ -1,0 +1,35 @@
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__box{
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        padding: 1.25rem 0;
+    }
+
+    &__title{
+        text-align: center;
+        font-family: $roboto-regular;
+        font-size: 1.3rem;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2.1rem 0;
+    }
+    &__article{
+        width: 20%;
+    }
+    &__article-title{
+        color: $text;
+        font-size: 1.2rem;
+        font-family: $roboto-regular;
+    }
+}
