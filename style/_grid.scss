@@ -1,61 +1,130 @@
 
 .grid{
     display: grid;
-    grid: repeat(3, 1fr) / repeat(auto-fill, minmax(250px, 1fr));
-    height: 550px;
+    grid: repeat(8, 1fr) / repeat(auto-fill, minmax(150px, 1fr));
+    height: 900px;
     grid-auto-flow: dense;
     grid-gap: 5px;
 
-    @media (max-width:1200px){
-        grid: repeat(4, 1fr) / repeat(auto-fill, minmax(150px, 1fr));
-        height: 400px;
+    @media(min-width:467px){
+        grid: repeat(7, 1fr) / repeat(3, minmax(140px, 1fr));
+
     }
 
-    @media (max-width:768px){
-        grid: repeat(6, 1fr) / repeat(auto-fill, minmax(150px, 1fr 2fr));
-        height: 600px;
+    @media(min-width:768px){
+        grid: repeat(6, 1fr) / repeat(5, minmax(140px, 1fr));
+        grid-auto-flow: dense;
+    }
+
+    @media(min-width:1200px){
+        grid: repeat(9, 1fr) / repeat(5, minmax(140px, 1fr));
+        grid-auto-flow: dense;
     }
 
     &__figure{
         width: 100%;
         background-size: cover;
-        background-position: top;
+        background-position: center;
     }
 
     &__item1{
         background-image: url(../images/01.jpg);
-        grid-row: 2 span;
+        grid-row: 2 span;  
+        @media(min-width:467px){
+            grid-row: 3 span;  
+    
+        }  
+
+        @media(min-width:1200px){
+            grid-row: 4 span;
+        }
     }
 
     &__item2{
         background-image: url(../images/02.jpg);
         grid-column: 2 span;
         grid-row: 2 span;
+        @media(min-width:1200px){
+            grid-row: 3 span;
+            background-position-y: 0;
+        }
     }
     &__item3{
         background-image: url(../images/03.jpg);
         grid-column: 2 span;
+        background-position: top;
+        @media(min-width:467px){
+            background-position-y: -55px; 
+    
+        } 
+
+        @media(min-width:768px){
+            background-position-y: 0;
+            grid-row: 2 span;
+        }  
+
+        @media(min-width:1200px){
+            grid-row: 3 span;
+        }
     }
     &__item4{
         background-image: url(../images/04.jpg);
+        @media(min-width:1200px){
+            grid-row: 2 span;
+        }
     }
     &__item5{
         background-image: url(../images/05.jpg);
+        @media(min-width:1200px){
+            grid-row: 2 span;
+        }
     }
     &__item6{
         background-image: url(../images/06.jpg);
         grid-row: 2 span;
+        @media(min-width:467px){
+            grid-row: 2 span;  
+            grid-column: 2 span;
+        }  
     }
     &__item7{
         background-image: url(../images/07.jpg);
+        @media(min-width:1200px){
+            grid-row: 2 span;
+        }
     }
     &__item8{
         background-image: url(../images/08.jpg);
         grid-column: 2 span;
+        @media(min-width:467px){
+            grid-column: 3 span;
+            display: none;
+        }
+        @media(min-width:768px){
+            grid-column: 3 span;
+            display: block;
+        }  
+
+        @media(min-width:1200px){
+            grid-column: 2 span;
+        }
     }
     &__item9{
         background-image: url(../images/09.jpg);
             grid-column: 2 span;
+            @media(min-width:467px){
+                grid-column: 3 span;
+                display: none;
+            } 
+
+            @media(min-width:768px){
+                grid-column: 3 span;
+                display: block;
+            } 
+
+            @media(min-width:1200px){
+                grid-row: 3 span;
+            }
     }
     &__item10{
         background-image: url(../images/10.jpg);
@@ -64,6 +133,17 @@
     &__item11{
         background-image: url(../images/11.jpg);
         grid-row: 2 span;
+        @media(min-width:467px){
+            grid-row: 1 span;
+           
+        } 
+        @media(min-width:768px){
+            grid-column: 2 span;
+           
+        } 
+        @media(min-width:1200px){
+            grid-row: 2 span;
+        }
     }
 
     &__item12{
