@@ -1,0 +1,122 @@
+
+.patrocinio{
+
+    & .card__article-title{
+        display: inline-block;
+       &::before{
+           left: 15%; 
+       }
+    }
+
+    &__box-title{
+        text-align: center;
+        padding-top: 50px;
+
+        & p{
+            width: 30%;
+            margin: 0 auto;
+            font-family: $roboto-regular;
+            padding: 6px;
+            @media(max-width:768px){
+                width: 90%;
+               
+            }
+        }
+    }
+
+    &__box-img{
+        display: flex;
+        justify-content: center;  
+        padding: 20px 0 40px;
+    }
+
+
+    &__list{
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 55%;
+        justify-content: space-between;
+        filter: brightness(0.2);
+        @media(max-width:768px){
+            width: 90%;
+            justify-content: center;
+        }
+    }
+
+    &__item{
+        width: 150px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ------------------------------- PATROCINIO ------------------------------- */
+
+    &__action{
+        border-top: 1px solid $secundary;
+        padding: 40px 0;
+        background-color: $background;
+    }
+
+    &__action-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width:768px){
+        flex-direction: column;
+    }
+
+    &-title{
+        display: flex;
+        width: 45%;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 40px;
+
+        @media(max-width:768px){
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        h3{
+            font-size: 2rem;
+            margin: 0;
+            font-family: $roboto-regular;
+            text-transform: uppercase;
+            @media(max-width:768px){
+              text-align: center;
+            }
+        }
+
+        h6{
+            margin: 0;
+            font-size: 1rem;
+            font-family: $roboto-regular;
+        }
+    }
+    }
+
+    
+
+    &__box-cta{
+
+        background-color: $primary;
+        a{
+          @include cta(white, black, white, black);  
+          display: block;
+          font-family: $roboto-regular;
+        }
+    }
+
+
+
+}
+
+
+
