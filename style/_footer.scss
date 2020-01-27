@@ -1,0 +1,97 @@
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background: $secundary;
+    flex-direction: column;
+    align-items: center;
+
+    &__box{
+        display: flex;
+        width: 80%;
+        padding-top: 40px;
+        color: white;
+        padding-bottom: 40px;
+        font-family: $roboto-regular;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+    & .card__article-title{
+        font-size: .8rem;
+        color: white;
+    }
+
+    &__about, &__from{
+        width: 400px;
+    }
+
+    &__about{
+        span{
+            color: $primary;
+        }
+    }
+
+    &__from ul, &__from ul li{
+       
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        
+    }
+
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        grid: 50% 50% / 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+        padding-top: 20px;
+       
+    }
+
+    &__list li, img{
+        height: 100%;
+        object-fit: cover;
+    }
+                                
+    &__black{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        background-color: black;
+    }
+
+    &__black-content{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h6{
+            font-size: .9rem;
+            color: white;
+            font-family: $roboto-regular;
+            text-transform: capitalize;
+        }
+    }
+
+    &__black-content ul{
+        width: 32%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    &__black ul li{
+        display: inline-block;
+    }
+
+    &__black ul li a{
+        color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $roboto-regular;
+    }
+}
