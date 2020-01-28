@@ -62,6 +62,7 @@
         width: 100%;
         justify-content: center;
         background-color: black;
+       
     }
 
     &__black-content{
@@ -69,12 +70,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+       
 
         h6{
             font-size: .9rem;
             color: white;
             font-family: $roboto-regular;
             text-transform: capitalize;
+            margin: 0;
+            color: $text;
         }
     }
 
@@ -82,6 +86,8 @@
         width: 32%;
     display: flex;
     justify-content: space-between;
+    margin: 0;
+    line-height: 50px;
     }
 
     &__black ul li{
@@ -93,5 +99,15 @@
     text-decoration: none;
     text-transform: uppercase;
     font-family: $roboto-regular;
+    color: $text;
+    padding: 0 34px;
+    display: block;
+    &:hover{
+        background-color: $primary;
+        color: white;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(0, 0, 0.18, 1.23);
+        
+    }
     }
 }
