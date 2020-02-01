@@ -672,6 +672,21 @@ body .container .menu-toggle {
   }
 }
 
+.grid .active {
+  -webkit-transform: scale(1.5) translate(16%, 15%);
+          transform: scale(1.5) translate(16%, 15%);
+  z-index: 5;
+  width: 500px;
+  display: block;
+  position: absolute;
+  height: 379px;
+  border-bottom: 120px solid #000000c9;
+  border-top: 120px solid #000000c9;
+  border-right: 180px solid #000000c9;
+  border-left: 180px solid #000000c9;
+  background-repeat: no-repeat;
+}
+
 .patrocinio {
   /* ------------------------------- PATROCINIO ------------------------------- */
 }
