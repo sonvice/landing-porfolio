@@ -685,6 +685,8 @@ body .container .menu-toggle {
   border-right: 180px solid #000000c9;
   border-left: 180px solid #000000c9;
   background-repeat: no-repeat;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
 }
 
 .patrocinio {
