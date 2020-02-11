@@ -12,6 +12,7 @@
     max-width: 1280px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
  
     @media(min-width:467px){
         grid: repeat(7, 1fr) / repeat(3, minmax(140px, 1fr));

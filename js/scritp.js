@@ -5,25 +5,31 @@ let toggle = document.querySelector(".menu-toggle").addEventListener("click", fu
 
 /* ----- RECORRIENDO GALERÍA ----- */
 
-// let img = document.querySelectorAll('.grid');
 
-// let  nodeArray = [].slice.call(img);
 
-// let hijoNodo = nodeArray[0].children[1]
 
-// console.log(hijoNodo.getElementByclassName('grid__figure'))
+
 
 
 let galerery = document.getElementById("grid").children;
 let arrayGalery = Array.prototype.slice.call(galerery)
 
+let element = document.createElement("div")
+    element.setAttribute("class", "active");
+let modal = document.getElementById("grid");
+    
+
 for (let i = 0; i < arrayGalery.length; i++) {
     const galery = arrayGalery[i];
 
     galery.addEventListener("click", function(){
-        galery.classList.toggle("active")
+        
+    modal.appendChild(element);
+
+    element.addEventListener("click",function(){
+        element.remove(element);
     })
 
-   console.log()
+    })
     
 }
