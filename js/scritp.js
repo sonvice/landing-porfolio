@@ -21,7 +21,7 @@ let modal = document.getElementById("grid");
 
 for (let i = 0; i < arrayGalery.length; i++) {
     const galery = arrayGalery[i];
-    let valorId = galery.setAttribute("id", `img${i}`);
+    //let valorId = galery.setAttribute("id", `img${i}`);
     galery.addEventListener("click", function(){
 
        const  gridCss = window.getComputedStyle(galery)
@@ -40,11 +40,7 @@ for (let i = 0; i < arrayGalery.length; i++) {
     })
 
   
- 
     
 }
 
- const img = document.getElementById("item1")
-//  const gridCss = window.getComputedStyle(img)
 
-// console.log(gridCss.backgroundImage)
