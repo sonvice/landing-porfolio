@@ -201,16 +201,13 @@
     .active{
         transform: scale(1.5) translate(16%, 15%);
         z-index: 5;
-        width: 500px;
+        width: 50%;
         display: block;
         position: absolute;
-        height: 379px;
-        border-bottom: 120px solid #000000c9;
-        border-top: 120px solid #000000c9;
-        border-right: 180px solid #000000c9;
-        border-left: 180px solid #000000c9;
+        height: 50%;
         background-repeat: no-repeat;
         transition: .3s ease-in;
+        background-position: center center;
     }
     
 }
